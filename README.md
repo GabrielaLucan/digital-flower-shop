@@ -15,6 +15,7 @@ Project supports request to the following APIs:
 - PUT ​/api​/v1​/products/{productId} - Update a product
 - DELETE ​/api​/v1​/products/{productId} - Delete a product
 - GET ​/api​/v1​/recommendations - Retrieves a list of flower recommendations
+- GET ​/api​/v1​/catFact - Retrieves a cat fact
 
 Full documentation can be found [here][api-docs]
 
