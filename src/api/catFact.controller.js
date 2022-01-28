@@ -14,11 +14,11 @@ export async function executeExternalApiRequest({ url, method = 'GET' }) {
 
     return new Promise((resolve, reject) => {
         request(options, (error, response, body) => {
-            if (error || body?.errors) {
+            if (error || (body && body.errors)) {
                 return reject(error || body);
             }
 
-            const statusCode = response?.statusCode;
+            const statusCode = response.statusCode;
             /* eslint-disable prefer-promise-reject-errors */
             if (statusCode && (statusCode < 200 || statusCode >= 300)) {
                 return reject({
