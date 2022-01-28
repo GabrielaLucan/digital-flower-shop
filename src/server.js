@@ -4,6 +4,7 @@ import yamljs from "yamljs";
 import orders from "./api/orders.route.js";
 import products from "./api/products.route.js";
 import recommendations from "./api/recommendations.route.js"
+import catFact from "./api/catFact.route.js";
 import path from 'path';
 import cors from 'cors';
 
@@ -19,6 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use("/api/v1/orders", orders)
 app.use("/api/v1/products", products)
 app.use("/api/v1/recommendations", recommendations)
+app.use("/api/v1/catFact", catFact)
 
 // // Make openapi definition available
 const swaggerDoc = yamljs.load(__dirname + '/src/swagger/index.yaml');

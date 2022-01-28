@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const connectDb = () => {
+const connectDb = async () => {
     mongoose.connect(process.env.DB_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true
